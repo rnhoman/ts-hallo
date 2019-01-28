@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">List Posts</h3>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Judul</th>
+            <th>Isi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Title</td>
+            <td>Body</td>
+            <td>
+              <button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
+              <button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel-footer">
+      <button class="btn btn-primary" (click)="openModal(template)">
+        <span class="glyhicon glyphicon-plus"></span>
+        ADD USER
+      </button>
+    </div>
+  </div>
+
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Create Posts</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="name">Title</label>
+          <!-- <input type="text" class="form-control" name="name" placeholder="Nama"[(ngModel)]="name"> -->
+        </div>
+      </form>
+    </div>
+  </ng-template>
+</div>
